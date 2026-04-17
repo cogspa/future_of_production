@@ -132,7 +132,7 @@ export default function App() {
           <div className="inline-flex rounded-full border border-white/15 bg-white/5 px-4 py-1 text-sm text-neutral-300 backdrop-blur-md">
             Conference recap
           </div>
-          <h1 className="mt-6 text-4xl font-extrabold tracking-tight sm:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-white to-neutral-400">
+          <h1 className="mt-6 text-4xl font-extrabold tracking-tight sm:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-white to-neutral-400" style={{ fontFamily: '"Offside", sans-serif' }}>
             The Future of Production
           </h1>
           <p className="mt-4 text-xl font-medium text-neutral-300 flex items-center gap-2">
@@ -151,7 +151,7 @@ export default function App() {
           <div className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-2xl shadow-black/40 backdrop-blur-sm transition-all hover:border-white/15">
             <h2 className="text-2xl font-bold flex items-center gap-3">
               <span className="bg-neutral-800 p-2 rounded-lg text-neutral-300">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><line x1="10" y1="9" x2="8" y2="9" /></svg>
               </span>
               Key notes
             </h2>
@@ -168,7 +168,7 @@ export default function App() {
           <div className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-2xl shadow-black/40 backdrop-blur-sm transition-all hover:border-white/15">
             <h2 className="text-2xl font-bold flex items-center gap-3">
               <span className="bg-neutral-800 p-2 rounded-lg text-neutral-300">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><line x1="12" y1="17" x2="12.01" y2="17" /></svg>
               </span>
               FAQ
             </h2>
@@ -222,7 +222,7 @@ export default function App() {
               These notes organize a raw, auto-transcribed conference discussion into a
               more usable format. The emphasis throughout is on how fast the landscape is
               changing, while also holding onto a clear principle: <strong className="text-neutral-200">technology should stay
-              in service of story and creative intent.</strong>
+                in service of story and creative intent.</strong>
             </p>
           </div>
 
