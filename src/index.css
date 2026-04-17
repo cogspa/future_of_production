@@ -8,6 +8,12 @@
   --color-neutral-100: #f5f5f5;
   --color-white: #ffffff;
   --color-black: #000000;
+  
+  --color-theme-pink: #D95FAE;
+  --color-theme-blue-deep: #0756F2;
+  --color-theme-blue-light: #D5DFF2;
+  --color-theme-blue-bright: #0C70F2;
+  --color-theme-orange: #F2441D;
 }
 
 body {

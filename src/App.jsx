@@ -18,9 +18,8 @@ function LinkCard({ href, label }) {
   return (
     <a
       href={href}
-      target="_blank"
       rel="noreferrer"
-      className="group flex flex-col overflow-hidden rounded-xl border border-white/10 bg-neutral-900 transition-all hover:-translate-y-1 hover:border-white/30 hover:shadow-xl hover:shadow-black/50"
+      className="group flex flex-col overflow-hidden rounded-xl border border-theme-blue-bright/20 bg-theme-blue-deep/10 transition-all hover:-translate-y-1 hover:border-theme-pink/60 hover:shadow-xl hover:shadow-theme-blue-bright/10"
     >
       <div className="aspect-video w-full overflow-hidden relative bg-black">
         <img
@@ -32,9 +31,9 @@ function LinkCard({ href, label }) {
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
         <div className="absolute bottom-2 right-3 text-[10px] font-mono text-white/40">{domain}</div>
       </div>
-      <div className="p-3 border-t border-white/5 flex items-center justify-between">
-        <span className="text-sm font-medium text-neutral-200 truncate">{label}</span>
-        <svg className="w-4 h-4 text-neutral-500 group-hover:text-white transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+      <div className="p-3 border-t border-theme-blue-bright/10 flex items-center justify-between">
+        <span className="text-sm font-medium text-theme-blue-light truncate">{label}</span>
+        <svg className="w-4 h-4 text-theme-blue-bright group-hover:text-theme-pink transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
       </div>
     </a>
   );
@@ -125,25 +124,25 @@ export default function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-neutral-950 text-neutral-100 font-sans selection:bg-white/20">
-      <header className="border-b border-white/10 bg-gradient-to-b from-neutral-900 to-neutral-950 relative overflow-hidden">
-        <div className="absolute inset-0 bg-white/[0.02] bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+    <div className="min-h-screen bg-[#020817] text-neutral-100 font-sans selection:bg-theme-pink/30">
+      <header className="border-b border-theme-blue-deep/30 bg-gradient-to-b from-theme-blue-deep/10 to-[#020817] relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(12,112,242,0.25),rgba(255,255,255,0))]"></div>
         <div className="mx-auto max-w-6xl px-6 py-16 lg:px-10 relative z-10">
-          <div className="inline-flex rounded-full border border-white/15 bg-white/5 px-4 py-1 text-sm text-neutral-300 backdrop-blur-md">
+          <div className="inline-flex rounded-full border border-theme-blue-bright/30 bg-theme-blue-bright/10 px-4 py-1 text-sm text-theme-blue-light backdrop-blur-md">
             Conference recap
           </div>
-          <h1 className="mt-6 text-4xl font-extrabold tracking-tight sm:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-white to-neutral-400" style={{ fontFamily: '"Offside", sans-serif' }}>
+          <h1 className="mt-6 text-4xl font-extrabold tracking-tight sm:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-theme-blue-light via-theme-pink to-theme-orange" style={{ fontFamily: '"Offside", sans-serif' }}>
             The Future of Production
           </h1>
           <h2 className="mt-3 text-xl sm:text-2xl font-medium">
-            <a href="https://rendercon2026.com/" target="_blank" rel="noreferrer" className="text-neutral-300 underline decoration-white/20 underline-offset-4 transition hover:text-white hover:decoration-white/50">
+            <a href="https://rendercon2026.com/" target="_blank" rel="noreferrer" className="text-theme-blue-light underline decoration-theme-pink/40 underline-offset-4 transition hover:text-white hover:decoration-theme-pink">
               Notes from Rendercon 2026
             </a>
           </h2>
-          <p className="mt-4 text-xl font-medium text-neutral-300 flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span> W. Hollywood, August 16th
+          <p className="mt-4 text-xl font-medium text-theme-blue-light flex items-center gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-theme-orange"></span> W. Hollywood, August 16th
           </p>
-          <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-400 sm:text-lg">
+          <p className="mt-6 max-w-3xl text-base leading-relaxed text-theme-blue-light/80 sm:text-lg">
             A one-page summary of major ideas from the discussion around AI rendering,
             world models, Blender, Gaussian splats, filmmaking workflows, and the
             future of artist-directed creative tools.
@@ -153,35 +152,35 @@ export default function App() {
 
       <main className="mx-auto grid max-w-6xl gap-8 px-6 py-12 lg:grid-cols-[1.2fr_0.8fr] lg:px-10">
         <section className="space-y-8">
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-2xl shadow-black/40 backdrop-blur-sm transition-all hover:border-white/15">
-            <h2 className="text-2xl font-bold flex items-center gap-3">
-              <span className="bg-neutral-800 p-2 rounded-lg text-neutral-300">
+          <div className="rounded-3xl border border-theme-blue-deep/30 bg-theme-blue-deep/5 p-8 shadow-xl shadow-theme-blue-bright/5 backdrop-blur-sm transition-all hover:border-theme-blue-bright/40">
+            <h2 className="text-2xl font-bold flex items-center gap-3 text-white">
+              <span className="bg-theme-blue-deep/30 p-2 rounded-lg text-theme-pink">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><line x1="10" y1="9" x2="8" y2="9" /></svg>
               </span>
               Key notes
             </h2>
-            <ul className="mt-6 space-y-4 text-neutral-300">
+            <ul className="mt-6 space-y-4 text-theme-blue-light">
               {notes.map((note, index) => (
                 <li key={index} className="flex gap-4 leading-relaxed group">
-                  <span className="mt-2.5 h-1.5 w-1.5 flex-none rounded-full bg-neutral-500 transition-colors group-hover:bg-white" />
-                  <span className="group-hover:text-neutral-100 transition-colors">{note}</span>
+                  <span className="mt-2.5 h-1.5 w-1.5 flex-none rounded-full bg-theme-orange transition-colors group-hover:bg-theme-pink" />
+                  <span className="text-theme-blue-light/80 group-hover:text-theme-blue-light transition-colors">{note}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-2xl shadow-black/40 backdrop-blur-sm transition-all hover:border-white/15">
-            <h2 className="text-2xl font-bold flex items-center gap-3">
-              <span className="bg-neutral-800 p-2 rounded-lg text-neutral-300">
+          <div className="rounded-3xl border border-theme-blue-deep/30 bg-theme-blue-deep/5 p-8 shadow-xl shadow-theme-blue-bright/5 backdrop-blur-sm transition-all hover:border-theme-blue-bright/40">
+            <h2 className="text-2xl font-bold flex items-center gap-3 text-white">
+              <span className="bg-theme-blue-deep/30 p-2 rounded-lg text-theme-pink">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><line x1="12" y1="17" x2="12.01" y2="17" /></svg>
               </span>
               FAQ
             </h2>
             <div className="mt-8 space-y-6">
               {faq.map((item, index) => (
-                <div key={index} className="rounded-2xl border border-white/5 bg-black/20 p-6 transition-all hover:bg-black/30 hover:border-white/10">
-                  <h3 className="text-xl font-semibold text-white">{item.q}</h3>
-                  <p className="mt-3 leading-relaxed text-neutral-400">{item.a}</p>
+                <div key={index} className="rounded-2xl border border-theme-blue-deep/30 bg-black/30 p-6 transition-all hover:bg-theme-blue-deep/20 hover:border-theme-pink/30">
+                  <h3 className="text-xl font-semibold text-theme-blue-light">{item.q}</h3>
+                  <p className="mt-3 leading-relaxed text-theme-blue-light/70">{item.a}</p>
                   {item.links.length > 0 && (
                     <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
                       {item.links.map((link) => (
@@ -196,8 +195,8 @@ export default function App() {
         </section>
 
         <aside className="space-y-8 sticky top-8 self-start">
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-2xl shadow-black/40 backdrop-blur-sm transition-all hover:border-white/15">
-            <h2 className="text-xl font-bold mb-6">Core themes</h2>
+          <div className="rounded-3xl border border-theme-blue-deep/30 bg-theme-blue-deep/5 p-8 shadow-xl shadow-theme-blue-bright/5 backdrop-blur-sm transition-all hover:border-theme-blue-bright/40">
+            <h2 className="text-xl font-bold mb-6 text-white">Core themes</h2>
             <div className="flex flex-wrap gap-2.5">
               {[
                 "AI rendering",
@@ -213,7 +212,7 @@ export default function App() {
               ].map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-full border border-white/10 bg-neutral-900/50 px-4 py-2 text-sm font-medium text-neutral-300 transition-colors hover:bg-neutral-800 hover:text-white cursor-default"
+                  className="rounded-full border border-theme-blue-deep/70 bg-theme-blue-deep/20 px-4 py-2 text-sm font-medium text-theme-blue-light transition-all hover:bg-theme-pink hover:text-white hover:border-theme-pink cursor-default"
                 >
                   {tag}
                 </span>
@@ -221,18 +220,18 @@ export default function App() {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-2xl shadow-black/40 backdrop-blur-sm transition-all hover:border-white/15">
-            <h2 className="text-xl font-bold mb-4">Event framing</h2>
-            <p className="leading-relaxed text-neutral-400">
+          <div className="rounded-3xl border border-theme-blue-deep/30 bg-theme-blue-deep/5 p-8 shadow-xl shadow-theme-blue-bright/5 backdrop-blur-sm transition-all hover:border-theme-blue-bright/40">
+            <h2 className="text-xl font-bold mb-4 text-white">Event framing</h2>
+            <p className="leading-relaxed text-theme-blue-light/80">
               These notes organize a raw, auto-transcribed conference discussion into a
               more usable format. The emphasis throughout is on how fast the landscape is
-              changing, while also holding onto a clear principle: <strong className="text-neutral-200">technology should stay
+              changing, while also holding onto a clear principle: <strong className="text-theme-blue-light font-bold">technology should stay
                 in service of story and creative intent.</strong>
             </p>
           </div>
 
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-2xl shadow-black/40 backdrop-blur-sm transition-all hover:border-white/15">
-            <h2 className="text-xl font-bold mb-6">Reference links</h2>
+          <div className="rounded-3xl border border-theme-blue-deep/30 bg-theme-blue-deep/5 p-8 shadow-xl shadow-theme-blue-bright/5 backdrop-blur-sm transition-all hover:border-theme-blue-bright/40">
+            <h2 className="text-xl font-bold mb-6 text-white">Reference links</h2>
             <ul className="space-y-4">
               {[
                 ["Google DeepMind Genie", "https://deepmind.google/models/genie/"],
