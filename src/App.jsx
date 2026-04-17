@@ -39,7 +39,11 @@ function LinkCard({ href, label }) {
   );
 }
 
+import { useState } from 'react';
+
 export default function App() {
+  const [activeTheme, setActiveTheme] = useState(null);
+
   const faq = [
     {
       q: "What was the main takeaway from the talk?",
@@ -160,7 +164,9 @@ export default function App() {
               Key notes
             </h2>
             <ul className="mt-6 space-y-4 text-theme-blue-light">
-              {notes.map((note, index) => (
+              {notes
+                .filter(note => !activeTheme || note.toLowerCase().includes(activeTheme.toLowerCase()))
+                .map((note, index) => (
                 <li key={index} className="flex gap-4 leading-relaxed group">
                   <span className="mt-2.5 h-1.5 w-1.5 flex-none rounded-full bg-theme-orange transition-colors group-hover:bg-theme-pink" />
                   <span className="text-theme-blue-light/80 group-hover:text-theme-blue-light transition-colors">{note}</span>
@@ -177,7 +183,9 @@ export default function App() {
               FAQ
             </h2>
             <div className="mt-8 space-y-6">
-              {faq.map((item, index) => (
+              {faq
+                .filter(item => !activeTheme || item.q.toLowerCase().includes(activeTheme.toLowerCase()) || item.a.toLowerCase().includes(activeTheme.toLowerCase()))
+                .map((item, index) => (
                 <div key={index} className="rounded-2xl border border-theme-blue-deep/30 bg-black/30 p-6 transition-all hover:bg-theme-blue-deep/20 hover:border-theme-pink/30">
                   <h3 className="text-xl font-semibold text-theme-blue-light">{item.q}</h3>
                   <p className="mt-3 leading-relaxed text-theme-blue-light/70">{item.a}</p>
@@ -209,14 +217,22 @@ export default function App() {
                 "filmmaking",
                 "storytelling",
                 "artist control"
-              ].map((tag) => (
-                <span
-                  key={tag}
-                  className="rounded-full border border-theme-blue-deep/70 bg-theme-blue-deep/20 px-4 py-2 text-sm font-medium text-theme-blue-light transition-all hover:bg-theme-pink hover:text-white hover:border-theme-pink cursor-default"
-                >
-                  {tag}
-                </span>
-              ))}
+              ].map((tag) => {
+                const isActive = activeTheme === tag;
+                return (
+                  <button
+                    key={tag}
+                    onClick={() => setActiveTheme(activeTheme === tag ? null : tag)}
+                    className={`rounded-full border px-4 py-2 text-sm font-medium transition-all cursor-pointer ${
+                      isActive 
+                        ? 'border-theme-pink bg-theme-pink text-white shadow-lg shadow-theme-pink/20'
+                        : 'border-theme-blue-deep/70 bg-theme-blue-deep/20 text-theme-blue-light hover:bg-theme-blue-deep/40'
+                    }`}
+                  >
+                    {tag}
+                  </button>
+                );
+              })}
             </div>
           </div>
 
