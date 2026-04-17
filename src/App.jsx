@@ -135,6 +135,11 @@ export default function App() {
           <h1 className="mt-6 text-4xl font-extrabold tracking-tight sm:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-white to-neutral-400" style={{ fontFamily: '"Offside", sans-serif' }}>
             The Future of Production
           </h1>
+          <h2 className="mt-3 text-xl sm:text-2xl font-medium">
+            <a href="https://rendercon2026.com/" target="_blank" rel="noreferrer" className="text-neutral-300 underline decoration-white/20 underline-offset-4 transition hover:text-white hover:decoration-white/50">
+              Notes from Rendercon 2026
+            </a>
+          </h2>
           <p className="mt-4 text-xl font-medium text-neutral-300 flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span> W. Hollywood, August 16th
           </p>
